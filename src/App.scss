@@ -1,0 +1,38 @@
+//Colors
+
+$yellow: #FFE600;
+$gray-100: #f8f9fa;
+$gray-500: #EEEEEE;
+$gray-700: #666666;
+$gray-800: #aeaeae;
+$gray-900: #999999;
+$gray-950: #333333;
+$white: #ffffff;
+$blue: #3483FA;
+
+// Layout
+
+$container-max-width: 1140px;
+$gutter: 30px;
+
+body {
+    background-color: $gray-500;
+}
+
+.app__header{
+    background-color: $yellow;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.app__container {
+    max-width: $container-max-width;
+}
+
+.app__container {
+    width: 100%;
+    padding-right: $gutter / 2 ;
+    padding-left: $gutter / 2;
+    margin-right: auto;
+    margin-left: auto;
+}
