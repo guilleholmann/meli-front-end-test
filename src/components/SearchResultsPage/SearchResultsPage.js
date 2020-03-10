@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './SearchResultsPage.scss';
+import {Link} from 'react-router-dom';
 
 function SearchResults() {
   
@@ -23,14 +24,14 @@ function SearchResults() {
      <div className="app__container section__listing-products">
        {results.slice(0, 4).map( item => (
        <div className="product__item" key={item.id}>
-          <a href={item.permalink}>
+          <Link to={`/item/${item.id}`}>
             <div>
               <img src={item.thumbnail} alt=""/>
               <span>{item.price}</span>
               <h1> {item.id}</h1>
               <h3> {item.title}</h3>
             </div>
-          </a>
+          </Link>
        </div>
        ))}
        

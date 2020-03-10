@@ -13,8 +13,8 @@ function App() {
         <SearchBar/>
         <Switch>
           <Route path="/" exact/>
-          <Route path="/SearchResults" component={SearchResults} />
-          <Route path="/ProductDetails" component={ProductDetails} />
+          <Route path="/items" exact component={SearchResults} />
+          <Route path="/item/:id" component={ProductDetails} />
         </Switch>
       </div>
     </Router> 
