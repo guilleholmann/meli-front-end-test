@@ -11,9 +11,11 @@ function App() {
     <Router>
       <div className="App">
         <SearchBar/>
-        <Route path="/" />
-        <Route path="/SearchResults" component={SearchResults} />
-        <Route path="/ProductDetails" component={ProductDetails} />
+        <Switch>
+          <Route path="/" exact/>
+          <Route path="/SearchResults" component={SearchResults} />
+          <Route path="/ProductDetails" component={ProductDetails} />
+        </Switch>
       </div>
     </Router> 
   );
