@@ -1,1 +1,8 @@
 @import '../../assets/styles/variables.scss';
+
+.section__listing-products {
+    background-color: $white;
+    margin-top: $gutter * 1.5;
+    padding-top: $gutter * 1.5;
+    padding-bottom: $gutter * 1.5;
+}
