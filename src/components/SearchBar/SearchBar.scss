@@ -1,0 +1,74 @@
+@import '../../assets/styles/variables.scss';
+
+.app__header{
+    background-color: $yellow;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.app__container {
+    max-width: $container-max-width;
+}
+
+.app__container {
+    width: 100%;
+    padding-right: $gutter / 2 ;
+    padding-left: $gutter / 2;
+    margin-right: auto;
+    margin-left: auto;
+}
+.app__nav {
+    display: flex;
+}
+.app__logo {
+    background-image: url('../../assets/images/Logo_ML.png');
+    background-repeat: no-repeat;   
+    display: inline-block;
+    height: 36px;
+    outline: 0;
+    width: 56px;
+    span {
+        text-indent: -999px;
+        visibility: hidden;
+    }
+}
+.nav__search-form {
+    flex: 0 0 94%;
+    margin-left: 20px;
+    position: relative;
+}
+.nav__search-input{
+    background-color: $white;
+    border-radius: 2px;
+    border: 1px solid $gray-500;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    color: $gray-950;
+    height: 36px;
+    outline: 0;
+    padding: 7px 60px 9px 15px;
+    width: 100%;
+    
+} 
+
+.nav__search-btn {
+    background-color: $gray-500;
+    background-image: none;
+    cursor: pointer;
+    height: 36px;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    &:focus {
+        outline: 0;
+    }
+}
+
+.nav__icon-search {
+    background-image: url('../../assets/images/ic_Search.png');
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    margin: 0 auto;
+}
