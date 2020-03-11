@@ -24,7 +24,7 @@ function SearchResults() {
      <div className="app__container section__listing-products">
        {results.slice(0, 4).map( item => (
        <div className="product__item" key={item.id}>
-          <Link to={`/item/${item.id}`}>
+          <Link to={`/items/${item.id}`}>
             <div>
               <img src={item.thumbnail} alt=""/>
               <span>{item.price}</span>

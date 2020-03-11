@@ -1,37 +1,29 @@
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
 import './ProductDetailsPage.scss';
 
-
-
- // match is to get access to the prop of the links
-function ProductDetailsPage({match}) {
+function ProductDetail( { match }) {
   
   //use fetchItems when component mounts
- 
-  useEffect ( ( ) => {
-    fetchItem ();
-    console.log(match);
-  });
+  useEffect ( () => {
+    fetchItem();
+  }, []);
 
-  const [item,setItem] = useState();
-  //https://api.mercadolibre.com/items/
-  //{`/item/${item.id}`}
+  const [item,setItem] = useState({});
+
   const fetchItem = async () => {
     const fetchItem = await fetch(`https://api.mercadolibre.com/items/${match.params.id}`);
     const item = await fetchItem.json();
-    setItem(item);
     console.log(item);
+    setItem(item);
   }
-
-  
 
   return (
      <div className="app__container section__listing-products">
-        <h1>item</h1>
-       
+      
+          <h1>{item.title}</h1> 
+           <img src={item.thumbnail} alt=""/>      
      </div>
   );
 }
 
-export default ProductDetailsPage;
+export default ProductDetail;
