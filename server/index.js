@@ -1,17 +1,13 @@
-
-
 const express = require('express');
 const http = require('http');
 const cors = require('cors');
 const MELI_BASE_URL = 'https://api.mercadolibre.com';
-
-
 const axios = require('axios');
 const app = express();
 app.use(cors());
 app.server = http.createServer(app);
 
-/*app.get('/api/items/:id', (req, res) => {
+app.get('/api/items/:id', (req, res) => {
 
   const productId = req.params.id;
   if(!productId) {
@@ -70,7 +66,7 @@ app.server = http.createServer(app);
     }
   })
   .catch(err => res.status(400).send(err));
-}); */
+}); 
 
 app.get('/api/items', (req, res) => {
     const query = req.query.q;

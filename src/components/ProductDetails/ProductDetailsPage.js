@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './ProductDetailsPage.scss';
+import { searchProducts } from '../../services/product-service';
 
 function ProductDetail( { match }) {
   

@@ -1,11 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import queryString from 'query-string';
 import "./SearchBar.scss";
 
-const SearchBar = () => {
-  const [inputValue, setIputvalue] = useState('')
+const SearchBar = ({ location }) => {
+  const [inputValue, setIputvalue] = useState('');
 
-  const onSubmit = () => {
+  useEffect(() => {
+    // const urlPath = queryString.parse(location.search);
+    // console.log('urlPath: ', urlPath);
+    // if(search) {
+    //   setIputvalue(search);
+    // }
+  }, []);
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if(inputValue !== '') {
+      window.location.href = `/items?search=${inputValue}`;
+    }
   }
 
   return (
@@ -19,10 +31,7 @@ const SearchBar = () => {
           action=""
           method="GET"
           role="search"
-          onSubmit={(e) => {
-            e.preventDefault();
-            window.location.href = `/items?search=${inputValue}`;
-          }}
+          onSubmit={onSubmit}
         >
           <input
             type="text"
