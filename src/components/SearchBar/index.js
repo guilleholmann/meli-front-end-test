@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import queryString from 'query-string';
-import "./SearchBar.scss";
+import "./styles.scss";
 
 const SearchBar = ({ location }) => {
   const [inputValue, setIputvalue] = useState('');
@@ -22,8 +22,8 @@ const SearchBar = ({ location }) => {
 
   return (
     <header className="app__header">
-      <div className="app__nav app__container">
-        <a className="app__logo" href="/" tabIndex="4">
+      <div className="nav app__container">
+        <a className="nav__logo" href="/" tabIndex="4">
           <span>Mercado Libre - Donde comprar y vender de todo</span>
         </a>
         <form
