@@ -3,9 +3,11 @@
 .results {
   &__section {
     background-color: $white;
+    border-radius: 4px;
     margin-top: $gutter * 1.5;
-    padding-top: $spacer-default;
+    margin-bottom: $gutter * 1.5;
     padding-bottom: $spacer-default;
+    padding-top: $spacer-default;
   }
   &__list {
     list-style: none;
@@ -15,6 +17,9 @@
       border-bottom: 1px solid $search__item-border-color;
       display: flex;
       padding: $spacer-default;
+      &:last-child {
+          border: 0;
+      }
       &:hover {
         background-color: $gray-500;
       }
@@ -34,10 +39,6 @@
   &__info {
     &-container {
       width: 70%;
-      h2 {
-        font-size: $results__product-title-font-size;
-        font-weight: 400;
-      }
     }
   }
   &__city {
@@ -47,10 +48,21 @@
     }
   }
   &__price {
+    color: $primary__color;
+    display: inline-block;
     font-size: $results__product-price-font-size;
+    margin-left: 5px;
   }
   &__currency-symbol {
     font-size: $results__product-price-font-size;
+  }
+  &__title {
+      color: $primary__color;
+      text-decoration: none;
+    h2 {
+        font-size: $results__product-title-font-size;
+        font-weight: 400;
+      }
   }
 }
 

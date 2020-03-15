@@ -45,7 +45,7 @@ const SearchResults = ({ location }) => {
                     <span className="item__currency-symbol">
                       {CURRENCY_SYMBOL_MAPPER[item.price.currency]}
                     </span>
-                    <span className="item__price">{item.price.amount}</span>
+                    <span className="item__price">{item.price.amount}</span><span>{item.price.decimals !== "00" && '.'}</span>
                     <span className="price__decimals">
                       {item.price.decimals !== "00" && item.price.decimals}
                     </span>
@@ -56,7 +56,9 @@ const SearchResults = ({ location }) => {
                         src={ShippingIcon}
                       />
                     )}
-                    <h2>{item.title}</h2>
+                    <Link className="item__title" to={`/items/${item.id}`}>
+                      <h2>{item.title}</h2>
+                    </Link>
                   </div>
                   <div className="item__city-container">
                     <span>{item.address}</span>
@@ -68,9 +70,9 @@ const SearchResults = ({ location }) => {
           {results.length === 0 && (
             <div className="no-results-container">
               <div className="help-data">
-                <span className="title">
+                <h2 className="title">
                   No hay publicaciones que coincidan con tu búsqueda.
-                </span>
+                </h2>
                 <ul className="tips-list">
                   <li>Revisá la ortografía de la palabra.</li>
                   <li>Utilizá palabras más genéricas o menos palabras.</li>
