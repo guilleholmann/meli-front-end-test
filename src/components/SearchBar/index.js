@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import queryString from 'query-string';
+import { CURRENCY_SYMBOL_MAPPER } from '../../utils';
 import "./styles.scss";
 
 const SearchBar = ({ location }) => {
