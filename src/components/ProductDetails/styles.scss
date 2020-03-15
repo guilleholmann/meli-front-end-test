@@ -1,1 +1,60 @@
-@import '../../assets/styles/variables.scss';
+@import "../../assets/styles/variables.scss";
+
+.item {
+  &__section {
+    background-color: $white;
+    border-radius: 4px;
+    margin-bottom: $gutter * 1.5;
+    margin-top: $gutter * 1.5;
+    padding-bottom: $spacer-default;
+    padding-top: $spacer-default;
+    padding-left: $spacer-default;
+    padding-right: $spacer-default;
+  }
+  &__column-container {
+    display: flex;
+  }
+  &__column-left {
+    flex: 70%;
+    padding: $spacer-default;
+  }
+  &__column-right {
+    flex: 30%;
+  }
+  &__picture {
+      height: auto ;
+      margin: 0 auto;
+      width: 100%;
+  }
+  &__description-text {
+      color: $gray-900;
+  }
+  &__title {
+      font-size: $item__product-title-font-size;
+  }
+  &__price {
+     font-size: $item__product-price-font-size;
+  }
+
+}
+
+
+.btn {
+    &__shop {
+        background-color: $blue;
+        border-radius: 4px;
+        border: 0;
+        color: $white;
+        display: block;
+        padding: $spacer-default $spacer-default * 4;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        font-size: 14px;
+    }
+    &__container {
+        padding-right: $spacer-default * 2;
+        padding-top: $spacer-default;
+    }
+    
+}

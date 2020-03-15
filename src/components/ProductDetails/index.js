@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Spinner from "../Spinner";
 import { showProductDetails } from "../../services/product-service";
 import "./styles.scss";
+import { CURRENCY_SYMBOL_MAPPER } from "../../utils";
 
 function ProductDetail({ match }) {
   const [product, setProduct] = useState({});
@@ -15,7 +16,6 @@ function ProductDetail({ match }) {
   const fetchProduct = query => {
     setLoading(true);
     showProductDetails(query).then(product => {
-      
       setProduct(product);
       setLoading(false);
     });
@@ -23,9 +23,32 @@ function ProductDetail({ match }) {
 
   return (
     <React.Fragment>
-      {(!loading && product.item )  ? (
+      {!loading && product.item ? (
         <div className="app__container ">
-           <h1>{product.item.title}</h1>
+          <div className="item__section">
+            <div className="item__column-container">
+              <div className="item__column-left">
+                <img
+                  className="item__picture"
+                  src={product.item.picture}
+                  alt={product.item.title}
+                />
+                <div className="item__description">
+                  <h2>Descripción del producto</h2>
+                  <p className="item__description-text">
+                    {product.item.description}
+                  </p>
+                </div>
+              </div>
+              <div className="item__info item__column-right">
+                <div className="item__price"><span>{CURRENCY_SYMBOL_MAPPER[product.item.price.currency]}</span>{product.item.price.amount}</div>
+                <h1 className="item__title">{product.item.title}</h1>
+                <div className="btn__container">
+                  <button className="btn__shop">COMPRAR</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       ) : (
         <Spinner />
