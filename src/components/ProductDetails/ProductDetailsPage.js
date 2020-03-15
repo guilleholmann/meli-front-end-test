@@ -1,29 +1,24 @@
-import React, {useState, useEffect} from 'react';
-import './ProductDetailsPage.scss';
-import { searchProducts } from '../../services/product-service';
+import React, { useState, useEffect } from "react";
+import "./ProductDetailsPage.scss";
+import { showProductDetails } from "../../services/product-service";
 
-function ProductDetail( { match }) {
-  
-  //use fetchItems when component mounts
-  useEffect ( () => {
-    fetchItem();
+function ProductDetail({ match }) {
+  const [item, setItem] = useState({});
+
+  useEffect(() => {
+    const itemUrl = match.params.id;
+    fetchItem(itemUrl);
   }, []);
 
-  const [item,setItem] = useState({});
-
-  const fetchItem = async () => {
-    const fetchItem = await fetch(`https://api.mercadolibre.com/items/${match.params.id}`);
-    const item = await fetchItem.json();
-    console.log(item);
-    setItem(item);
-  }
-
+  const fetchItem = query => {
+    showProductDetails(query).then(productId => {
+      setItem(productId);
+    });
+  };
   return (
-     <div className="app__container section__listing-products">
-      
-          <h1>{item.title}</h1> 
-           <img src={item.thumbnail} alt=""/>      
-     </div>
+    <div className="app__container section__listing-products">
+      <h1>{console.log(item)}</h1>
+    </div>
   );
 }
 
