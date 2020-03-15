@@ -1,6 +1,5 @@
 //Colors
 
-
 $gray-100: #f8f9fa;
 $gray-500: #eeeeee;
 $gray-700: #666666;
@@ -19,9 +18,14 @@ $body__background-color: $gray-500;
 
 $container-max-width: 1024px;
 $gutter: 30px;
+$spacer-default: 16px;
 
 // Fonts
 $font-size_base: 18px;
 
 // Paths
 $path-to-images: "../../assets/images";
+
+
+// Search Results Page
+$search__item-border-color: $gray-500;

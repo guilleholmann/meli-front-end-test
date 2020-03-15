@@ -1,8 +1,29 @@
-@import '../../assets/styles/variables.scss';
+@import "../../assets/styles/variables.scss";
 
-.section__listing-products {
+.results {
+  &__section {
     background-color: $white;
     margin-top: $gutter * 1.5;
-    padding-top: $gutter * 1.5;
-    padding-bottom: $gutter * 1.5;
+    padding-top: $spacer-default;
+    .item {
+        &__image {
+            height: 180px;
+            width: 180px;
+            &-container {
+                margin-right: $spacer-default;
+                width: 20%;
+            }            
+        }
+    }
+  }
+  &__list {
+      list-style: none;
+      padding: 0;
+      &-item {
+          border-bottom: 1px solid $search__item-border-color;
+          display: flex;
+      }
+  }
 }
+
+
