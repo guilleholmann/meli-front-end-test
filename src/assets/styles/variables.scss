@@ -1,16 +1,27 @@
 //Colors
 
-$yellow: #FFE600;
+
 $gray-100: #f8f9fa;
-$gray-500: #EEEEEE;
+$gray-500: #eeeeee;
 $gray-700: #666666;
 $gray-800: #aeaeae;
 $gray-900: #999999;
 $gray-950: #333333;
+$yellow: #ffe600;
 $white: #ffffff;
-$blue: #3483FA;
+$blue: #3483fa;
+
+$primary__color: $gray-950;
+$secondary__color: $gray-900;
+$body__background-color: $gray-500;
 
 // Layout
 
-$container-max-width: 1140px;
+$container-max-width: 1024px;
 $gutter: 30px;
+
+// Fonts
+$font-size_base: 18px;
+
+// Paths
+$path-to-images: "../../assets/images";

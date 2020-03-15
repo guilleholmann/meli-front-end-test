@@ -2,7 +2,7 @@
 .nav {
     display: flex;
     &__logo {
-        background-image: url('../../assets/images/Logo_ML.png');
+        background-image: url('#{$path-to-images}/Logo_ML.png');
         background-repeat: no-repeat;   
         display: inline-block;
         height: 36px;
@@ -21,9 +21,9 @@
     &__search-input{
         background-color: $white;
         border-radius: 2px;
-        border: 1px solid $gray-500;
-        box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
-        color: $gray-950;
+        border: 0;
+        color: $primary__color;
+        font-size: $font-size_base;
         height: 36px;
         outline: 0;
         padding: 7px 60px 9px 15px;
@@ -32,6 +32,7 @@
     &__search-btn {
         background-color: $gray-500;
         background-image: none;
+        border: 0;
         cursor: pointer;
         height: 36px;
         padding: 8px;
@@ -44,7 +45,7 @@
         }
     }
     &__icon-search {
-        background-image: url('../../assets/images/ic_Search.png');
+        background-image: url('#{$path-to-images}/ic_Search.png');
         background-repeat: no-repeat;
         height: 16px;
         width: 16px;
