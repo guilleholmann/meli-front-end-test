@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
 import SearchBar from './components/SearchBar/SearchBar';
-import SearchResults from './components/SearchResultsPage/SearchResultsPage'
-import ProductDetails from './components/ProductDetails/ProductDetailsPage'
+import SearchResults from './components/SearchResultsPage'
+import ProductDetails from './components/ProductDetails'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 

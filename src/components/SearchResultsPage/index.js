@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import queryString from "query-string";
 import { searchProducts } from "../../services/product-service";
-import "./SearchResultsPage.scss";
+import "./styles.scss";
 import Spinner from "../Spinner";
 
 const SearchResults = ({ location }) => {
