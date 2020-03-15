@@ -26,8 +26,7 @@ const SearchResults = ({ location }) => {
     <React.Fragment>
       {!loading ? (
         <div className="app__container section__listing-products">
-          {!loading &&
-            results.map(item => (
+          { results.map(item => (
               <div className="product__item" key={item.id}>
                 <Link to={`/items/${item.id}`}>
                   <div>

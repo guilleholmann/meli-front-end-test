@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./styles.scss";
+import Spinner from "../Spinner";
 import { showProductDetails } from "../../services/product-service";
+import "./styles.scss";
 
 function ProductDetail({ match }) {
   const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const itemUrl = match.params.id;
@@ -11,14 +13,24 @@ function ProductDetail({ match }) {
   }, []);
 
   const fetchProduct = query => {
-    showProductDetails(query).then(productId => {
-      setProduct(productId);
+    setLoading(true);
+    showProductDetails(query).then(product => {
+      
+      setProduct(product);
+      setLoading(false);
     });
   };
+
   return (
-    <div className="app__container section__listing-products">
-      <h1>{console.log(product)}</h1>
-    </div>
+    <React.Fragment>
+      {(!loading && product.item )  ? (
+        <div className="app__container ">
+           <h1>{product.item.title}</h1>
+        </div>
+      ) : (
+        <Spinner />
+      )}
+    </React.Fragment>
   );
 }
 
