@@ -1,24 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { CURRENCY_SYMBOL_MAPPER } from '../../utils';
 import "./styles.scss";
 
 const SearchBar = ({ location }) => {
-  const [inputValue, setIputvalue] = useState('');
+  const [inputValue, setIputvalue] = useState("");
 
-  useEffect(() => {
-    // const urlPath = queryString.parse(location.search);
-    // console.log('urlPath: ', urlPath);
-    // if(search) {
-    //   setIputvalue(search);
-    // }
-  }, []);
-
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
-    if(inputValue !== '') {
+    if (inputValue !== "") {
       window.location.href = `/items?search=${inputValue}`;
     }
-  }
+  };
 
   return (
     <header className="app__header">
