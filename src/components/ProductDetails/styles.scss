@@ -39,10 +39,11 @@
       margin-bottom: $spacer-default * 2;
     }
     &__condition {
-      margin-top: $spacer-default;
       font-size: $item__product-condition-font-size;
+      margin-top: $spacer-default;
     }
     &__description {
+      font-size: $item__product-description;
       padding-left: $spacer-default;
     }
   }
