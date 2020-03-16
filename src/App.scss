@@ -1,16 +1,15 @@
-@import './assets/styles/variables.scss';
+@import "./assets/styles/variables.scss";
 
 // Styles
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
-  
 body {
-    background-color: $body__background-color;
+  background-color: $body__background-color;
 }
 
 .app {
@@ -20,12 +19,14 @@ body {
     max-width: $container-max-width;
     padding-left: $spacer-default;
     padding-right: $spacer-default;
+    @media (max-width: 1024px) {
+      max-width: $container-max-width-m;
+    }
   }
 
-  &__header{
+  &__header {
     background-color: $yellow;
     padding-top: 10px;
     padding-bottom: 10px;
   }
 }
-

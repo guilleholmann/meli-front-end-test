@@ -52,13 +52,13 @@ function ProductDetail({ match }) {
                   `}
                 </span>
               </div>
+              <h1 className="item__title">{product.item.title}</h1>
               <div className="item__price">
                 <span>
                   {CURRENCY_SYMBOL_MAPPER[product.item.price.currency]}
                 </span>
                 {product.item.price.amount}
               </div>
-              <h1 className="item__title">{product.item.title}</h1>
               <div className="btn__container">
                 <button className="btn__shop">COMPRAR</button>
               </div>

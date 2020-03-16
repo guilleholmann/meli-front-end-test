@@ -30,12 +30,13 @@
     }
     &__title {
       font-size: $item__product-title-font-size;
-      margin-bottom: $spacer-default * 2;
-      margin-top: $spacer-default;
+      margin-bottom: 0;
+      margin-top: $spacer-default * 2;
     }
     &__price {
       font-size: $item__product-price-font-size;
-      margin-top: $spacer-default;
+      margin-top: $spacer-default * 2;
+      margin-bottom: $spacer-default * 2;
     }
     &__condition {
       margin-top: $spacer-default;
