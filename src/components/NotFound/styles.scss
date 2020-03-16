@@ -1,0 +1,13 @@
+@import "../../assets/styles/variables.scss";
+
+.not-found-page {
+  background-color: $white;
+  border-radius: $border-radius-default;
+  margin-bottom: 45px;
+  margin-top: 45px;
+  padding: $spacer-default * 2;
+  &__container {
+    padding-left: $spacer-default;
+    padding-right: $spacer-default;
+  }
+}
