@@ -8,6 +8,48 @@
     margin-bottom: $gutter * 1.5;
     padding-bottom: $spacer-default;
     padding-top: $spacer-default;
+    .item {
+      &__image {
+        height: 180px;
+        width: 180px;
+        border-radius: $boder-radius-default;
+        &-container {
+          margin-right: $spacer-default;
+          width: 20%;
+        }
+      }
+      &__info {
+        &-container {
+          width: 70%;
+        }
+      }
+      &__city {
+        &-container {
+          color: $gray-900;
+          font-size: $results__product-city-font-size;
+          text-align: center;
+          width: 10%;
+        }
+      }
+      &__price {
+        color: $primary__color;
+        display: inline-block;
+        font-size: $results__product-price-font-size;
+        margin-left: 5px;
+      }
+      &__currency-symbol {
+        font-size: $results__product-price-font-size;
+      }
+      &__title {
+        color: $primary__color;
+        text-decoration: none;
+        h2 {
+          font-size: $results__product-title-font-size;
+          font-weight: 400;
+          margin-top: $spacer-default * 2;
+        }
+      }
+    }
   }
   &__list {
     list-style: none;
@@ -18,52 +60,12 @@
       display: flex;
       padding: $spacer-default;
       &:last-child {
-          border: 0;
+        border: 0;
       }
       &:hover {
         background-color: $gray-500;
       }
     }
-  }
-}
-
-.item {
-  &__image {
-    height: 180px;
-    width: 180px;
-    &-container {
-      margin-right: $spacer-default;
-      width: 20%;
-    }
-  }
-  &__info {
-    &-container {
-      width: 70%;
-    }
-  }
-  &__city {
-    &-container {
-      font-size: $results__product-city-font-size;
-      color: $gray-900;
-    }
-  }
-  &__price {
-    color: $primary__color;
-    display: inline-block;
-    font-size: $results__product-price-font-size;
-    margin-left: 5px;
-  }
-  &__currency-symbol {
-    font-size: $results__product-price-font-size;
-  }
-  &__title {
-      color: $primary__color;
-      text-decoration: none;
-    h2 {
-        font-size: $results__product-title-font-size;
-        font-weight: 400;
-        margin-top: $spacer-default * 2 ;
-      }
   }
 }
 

@@ -2,13 +2,12 @@
 
 .item__section {
   background-color: $white;
-  border-radius: 4px;
+  border-radius: $boder-radius-default;
   margin-bottom: $gutter * 1.5;
   margin-top: $gutter * 1.5;
   padding-bottom: $spacer-default;
   padding-top: $spacer-default;
-  padding-left: $spacer-default;
-  padding-right: $spacer-default;
+
   .item {
     &__column-container {
       display: flex;
@@ -19,6 +18,7 @@
     }
     &__column-right {
       flex: 30%;
+      padding: $spacer-default;
     }
     &__picture {
       height: auto;
@@ -38,8 +38,11 @@
       margin-top: $spacer-default;
     }
     &__condition {
-        margin-top: $spacer-default;
-        font-size: $item__product-condition-font-size;
+      margin-top: $spacer-default;
+      font-size: $item__product-condition-font-size;
+    }
+    &__description {
+      padding-left: $spacer-default;
     }
   }
 }
@@ -51,11 +54,14 @@
     border: 0;
     color: $white;
     display: block;
+    font-size: 14px;
     padding: $spacer-default $spacer-default * 4;
     text-align: center;
     text-decoration: none;
     width: 100%;
-    font-size: 14px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__container {
     padding-right: $spacer-default * 2;

@@ -1,6 +1,7 @@
 @import '../../assets/styles/variables.scss';
 .nav {
     display: flex;
+    padding-left: 0;
     &__logo {
         background-image: url('#{$path-to-images}/Logo_ML.png');
         background-repeat: no-repeat;   
@@ -20,7 +21,7 @@
     }
     &__search-input{
         background-color: $white;
-        border-radius: 2px;
+        border-radius: $boder-radius-default / 2;
         border: 0;
         color: $primary__color;
         font-size: $font-size_base;
