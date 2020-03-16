@@ -57,7 +57,12 @@ function ProductDetail({ match }) {
                 <span>
                   {CURRENCY_SYMBOL_MAPPER[product.item.price.currency]}
                 </span>
-                {product.item.price.amount}
+                <span>
+                  {product.item.price.amount}{product.item.price.decimals !== 0 ? '.' : ''}
+                </span>
+                <span className="decimals">
+                    {`${product.item.price.decimals !== 0 ? product.item.price.decimals : '00'} `}
+                  </span>
               </div>
               <div className="btn__container">
                 <button className="btn__shop">COMPRAR</button>
